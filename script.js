@@ -1,28 +1,3 @@
-/*document.getElementById("language-toggle").addEventListener("click", function() {
-    alert("Language switching feature coming soon!");
-});*/
-
-// Example of dynamically updating market prices (can be replaced with API data)
-document.getElementById("market-prices").addEventListener("click", function() {
-    alert("Fetching latest market prices...");
-});
-
-// Example event listeners for other buttons
-document.getElementById("gov-schemes").addEventListener("click", function() {
-    alert("Redirecting to government schemes...");
-});
-
-document.getElementById("weather-updates").addEventListener("click", function() {
-    alert("Fetching latest weather updates...");
-});
-
-document.getElementById("soil-data").addEventListener("click", function() {
-    alert("Accessing soil data...");
-});
-
-document.getElementById("fpo-connection").addEventListener("click", function() {
-    alert("Connecting to Farmer Producer Organizations...");
-});
 // Language Data
 const translations = {
     en: {
@@ -88,6 +63,27 @@ function updateLanguage() {
 // Event Listener for Language Toggle
 document.getElementById("language-toggle").addEventListener("click", updateLanguage);
 
-// Initial Load to Ensure Language Updates Properly
+// **Button Actions**
+document.getElementById("market-prices").addEventListener("click", function() {
+    window.location.href = "market-prices.html"; // Replace with actual page URL
+});
+
+document.getElementById("gov-schemes").addEventListener("click", function() {
+    window.location.href = "gov-schemes.html"; // Replace with actual page URL
+});
+
+document.getElementById("weather-updates").addEventListener("click", function() {
+    window.location.href = "weather-updates.html"; // Replace with actual page URL
+});
+
+document.getElementById("soil-data").addEventListener("click", function() {
+    window.location.href = "soil-data.html"; // Replace with actual page URL
+});
+
+document.getElementById("fpo-connection").addEventListener("click", function() {
+    window.location.href = "fpo-connection.html"; // Replace with actual page URL
+});
+
+// **Initial Load**
 updateLanguage();
 
