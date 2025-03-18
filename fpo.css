@@ -34,13 +34,6 @@ h1 {
     color: #333;
 }
 
-.button-container {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 20px;
-}
-
 button {
     background-color: #8D6E63;
     color: white;
@@ -51,6 +44,7 @@ button {
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     width: 100%;
+    margin: 10px 0;
 }
 
 button:hover {
@@ -64,3 +58,4 @@ button:hover {
 #go-back:hover {
     background-color: #E68900;
 }
+

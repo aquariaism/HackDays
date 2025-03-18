@@ -43,19 +43,19 @@ function handleFPO() {
 }
 
 function handlePriceListing() {
-    window.location.href = "price-listing.html";
+    window.location.href = "PriceListing.html";
 }
 
 function handleSchemeListing() {
-    window.location.href = "scheme-listing.html";
+    window.location.href = "SchemeListing.html";
 }
 
 function handleWeatherForecast() {
-    window.location.href = "weather-forecast.html";
+    window.location.href = "WeatherForecast.html";
 }
 
 function handleCropPlanning() {
-    window.location.href = "crop-planning.html";
+    window.location.href = "CropPlanning.html";
 }
 
 function handleEmergencyHelp() {
