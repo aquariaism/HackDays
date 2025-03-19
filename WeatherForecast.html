@@ -3,19 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farmers Weather Forecast</title>
+    <title>Live Weather Forecast</title>
     <link rel="stylesheet" href="WeatherForcast.css">
 </head>
 <body>
     <div class="container">
-        <h1>Farmers Weather Forecast</h1>
+        <h1>Live Weather Forecast</h1>
+        <p>Enter your city below to get the current weather and hourly forecast.</p>
+
         <div class="input-group">
-            <input type="text" id="location" placeholder="Enter your location">
-            <button id="getWeather">Get Weather</button>
+            <input type="text" id="city" placeholder="Enter city name">
+            <button onclick="getWeather()">Get Weather</button>
         </div>
-        <div id="weatherResult" class="weather-result"></div>
+
+        <div id="temp-div" class="temperature-display"></div>
+        <div id="weather-info" class="weather-details"></div>
+        <img id="weather-icon" style="display: none;" alt="Weather Icon" />
+
+        <h2>Hourly Forecast (Next 24 Hours)</h2>
+        <div id="hourly-forecast" class="hourly-forecast"></div>
+
         <button onclick="window.location.href='index.html'" class="go-back-button">Back to Home</button>
+
     </div>
+
     <script src="wf.js"></script>
 </body>
 </html>
