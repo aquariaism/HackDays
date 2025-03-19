@@ -59,6 +59,6 @@ function handleCropPlanning() {
 }
 
 function handleEmergencyHelp() {
-    window.location.href = "emergency-help.html";
+    window.location.href = "emergency.html";
 }
 
