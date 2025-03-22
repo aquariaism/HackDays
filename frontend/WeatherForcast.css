@@ -24,11 +24,6 @@ h1 {
     margin-bottom: 20px;
 }
 
-p {
-    margin-bottom: 20px;
-    color: #444;
-}
-
 .input-group {
     display: flex;
     gap: 10px;
@@ -105,4 +100,5 @@ button:hover {
 .go-back-button:hover {
     background-color: #e68900;
 }
+
 

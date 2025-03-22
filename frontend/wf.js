@@ -1,6 +1,6 @@
 function getWeather() {
-    const apiKey = '08e9e7b72ded3e87e8c5403c70c89553'; 
-    const city = document.getElementById('city').value.trim(); 
+    const apiKey = '08e9e7b72ded3e87e8c5403c70c89553';
+    const city = document.getElementById('city').value.trim();
 
     if (!city) {
         alert('Please enter a city');
@@ -24,6 +24,7 @@ function getWeather() {
         .then(response => response.json())
         .then(data => {
             displayHourlyForecast(data.list);
+            giveIrrigationAdvice(data.list);
         })
         .catch(error => {
             console.error('Error fetching hourly forecast data:', error);
@@ -35,10 +36,8 @@ function displayWeather(data) {
     const tempDivInfo = document.getElementById('temp-div');
     const weatherInfoDiv = document.getElementById('weather-info');
     const weatherIcon = document.getElementById('weather-icon');
-    const hourlyForecastDiv = document.getElementById('hourly-forecast');
 
     weatherInfoDiv.innerHTML = '';
-    hourlyForecastDiv.innerHTML = '';
     tempDivInfo.innerHTML = '';
 
     if (data.cod !== 200) {
@@ -84,8 +83,28 @@ function displayHourlyForecast(hourlyData) {
     });
 }
 
+function giveIrrigationAdvice(forecastData) {
+    const next2to4Days = forecastData.slice(8, 32);
+    const rainPredicted = next2to4Days.some(item => item.weather[0].main.toLowerCase().includes('rain'));
+
+    const adviceMessage = rainPredicted 
+        ? "Rain is expected in the next 2-4 days. Avoid irrigation." 
+        : "No rain expected in the next 2-4 days. You are free to irrigate.";
+
+    const adviceDiv = document.createElement('div');
+    adviceDiv.style.marginTop = '20px';
+    adviceDiv.style.fontWeight = 'bold';
+    adviceDiv.style.color = rainPredicted ? '#C62828' : '#2E7D32';
+    adviceDiv.innerText = adviceMessage;
+
+    document.querySelector('.container').appendChild(adviceDiv);
+}
+
 function showImage() {
     const weatherIcon = document.getElementById('weather-icon');
     weatherIcon.style.display = 'block';
 }
+
+
+
 

@@ -1,3 +1,4 @@
+<!-- weather.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +10,7 @@
 <body>
     <div class="container">
         <h1>Live Weather Forecast</h1>
-        <p>Enter your city below to get the current weather and hourly forecast.</p>
+        <p>Enter your city to check current weather and irrigation advice.</p>
 
         <div class="input-group">
             <input type="text" id="city" placeholder="Enter city name">
@@ -17,8 +18,8 @@
         </div>
 
         <div id="temp-div" class="temperature-display"></div>
-        <div id="weather-info" class="weather-details"></div>
         <img id="weather-icon" style="display: none;" alt="Weather Icon" />
+        <div id="weather-info" class="weather-details"></div>
 
         <h2>Hourly Forecast (Next 24 Hours)</h2>
         <div id="hourly-forecast" class="hourly-forecast"></div>
@@ -26,7 +27,7 @@
         <button onclick="window.location.href='index.html'" class="go-back-button">Back to Home</button>
 
     </div>
-
     <script src="wf.js"></script>
 </body>
 </html>
+
