@@ -39,26 +39,26 @@ function updateContent() {
 }
 
 function handleFPO() {
-    window.location.href = "fpo.html";
+    window.location.href = "html/fpo.html";
 }
 
 function handlePriceListing() {
-    window.location.href = "PriceListing.html";
+    window.location.href = "html/PriceListing.html";
 }
 
 function handleSchemeListing() {
-    window.location.href = "SchemeListing.html";
+    window.location.href = "html/SchemeListing.html";
 }
 
 function handleWeatherForecast() {
-    window.location.href = "WeatherForecast.html";
+    window.location.href = "html/WeatherForecast.html";
 }
 
 function handleCropPlanning() {
-    window.location.href = "CropPlanning.html";
+    window.location.href = "html/CropPlanning.html";
 }
 
 function handleEmergencyHelp() {
-    window.location.href = "emergency.html";
+    window.location.href = "html/emergency.html";
 }
 

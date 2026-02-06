@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background: url('field-background.jpg') no-repeat center center/cover;
+    background: url('../images/field-background.jpg') no-repeat center center/cover;
     height: 50vh;
     display: flex;
     justify-content: center;
@@ -17,6 +17,7 @@ header {
     font-weight: bold;
     position: relative;
 }
+
 
 header::before {
     content: "";
